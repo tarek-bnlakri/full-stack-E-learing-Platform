@@ -5,8 +5,10 @@ import AuthLinks from '../AuthLinks/AuthLinks.jsx'
 import { getAuthSession } from '@/util/auth';
 import Link from 'next/link';
 import Image from 'next/image';
+import { unstable_noStore as noStore } from 'next/cache';
 async function NavBar() {
   
+noStore()
   const data= await getAuthSession()
   console.log(data)
   return (
