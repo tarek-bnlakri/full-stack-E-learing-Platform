@@ -101,7 +101,7 @@ function UploadePhoto({chapter,course}) {
             setDisplayImage(true)
           }}
           onUploadError={(error) => {
-            alert(`ERROR`);
+            alert(error);
           }}
         />
            
