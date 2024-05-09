@@ -8,7 +8,7 @@ async function CoursesWrapper({catid}) {
   const session = await getAuthSession()
   const getData=async(catid)=>{
     try {
-          const res= await fetch(`https://full-stack-e-learing-platform.vercel.app/api/course?catid=${catid || ""}&userEmail=${session.user.email}`,{method:"GET",cache:"no-store"})
+          const res= await fetch(`full-stack-e-learing-platform-with-tarek.vercel.app/api/course?catid=${catid || ""}&userEmail=${session.user.email}`,{method:"GET",cache:"no-store"})
           // if(!res.ok){
           //   throw new Error("Couldn't connect to server")
           // }
