@@ -70,8 +70,8 @@ function AddQuiz({chapter}) {
         return toast.error("All fields are required")
       }
       setLoading(true)
-      const res= await fetch(/api/quiz`,{method:"PUT",body:JSON.stringify({
-        value:value
+      const res= await fetch(`/api/quiz`,{method:"PUT",body:JSON.stringify({
+        value
       })})
       if(res.ok){
         const data= await res.json()
