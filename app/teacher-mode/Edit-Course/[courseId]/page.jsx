@@ -15,7 +15,7 @@ async function EditCourse({params,searchParams}) {
   const {editChapter}=searchParams
   
   const getCourse=async()=>{
-    const res= await fetch(`/api/course/${courseId}`,{cache:"no-store"})
+    const res= await fetch(`https://full-stack-e-learing-platform.vercel.app/api/course/${courseId}`,{cache:"no-store"})
     if(res.ok){
       const course= await res.json()
       return course
