@@ -15,7 +15,7 @@ async function EditCourse({params,searchParams}) {
   const {editChapter}=searchParams
   
   const getCourse=async()=>{
-    const res= await fetch(`http://localhost:3000/api/course/${courseId}`,{cache:"no-store"})
+    const res= await fetch(`/api/course/${courseId}`,{cache:"no-store"})
     if(res.ok){
       const course= await res.json()
       return course
