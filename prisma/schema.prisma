@@ -1,0 +1,132 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+model Account {
+  id                 String  @id @default(cuid()) @map("_id")
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  
+  access_token       String?  
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+// fddfdfdfdffddfddffdf
+model Session {
+  id           String   @id @default(cuid()) @map("_id")
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid()) @map("_id")
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  progressions Progression[]
+  courses Course[]
+  comments Comment[]
+  bio String?
+  
+}
+
+model VerificationToken {
+  identifier String @id @map("_id")
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+model Catigory{
+  id            String    @id @default(cuid()) @map("_id")
+  titleCatigory         String @unique
+  courses Course[]
+
+}
+model Comment{
+
+    id            String    @id @default(cuid()) @map("_id")
+    rating Int
+    userEmail String
+    createdAt DateTime @default(now())
+    courseId String
+    userText String 
+    user User @relation(fields: [userEmail],references: [email])
+    course Course @relation(fields: [courseId],references: [id],onDelete:Cascade)
+
+}
+
+model Course{
+  id            String    @id @default(cuid()) @map("_id")
+  title         String
+  createdAt DateTime @default(now())
+  catID String
+  objective String?
+  learningOptions String[]
+  cat Catigory  @relation(fields: [catID],references: [titleCatigory],onDelete:Cascade)
+   userEmail String
+   user User @relation(fields: [userEmail],references: [email])
+   img String?
+   publish Boolean @default(false)
+  chapters Chapter[]
+  progression Progression[]
+  couments Comment[]
+
+}
+
+model Chapter{
+  id            String    @id @default(cuid()) @map("_id")
+  chapterName String @unique
+  courseID String
+  content String?
+  publish Boolean @default(false)
+  cour Course @relation(fields: [courseID],references: [id],onDelete: Cascade)
+  progressions Progression[]
+  quiz Quiz[]
+}
+model Quiz{
+   id            String    @id @default(cuid()) @map("_id")
+   question String
+    options String[]
+     answer Int
+     chapter String 
+     chap Chapter @relation(fields: [chapter],references: [id],onDelete:Cascade)
+}
+
+model Like{
+  id            String    @id @default(cuid()) @map("_id")
+}
+
+model Progression {
+  id         String   @id @default(cuid()) @map("_id") 
+  isCompleted Boolean 
+  
+  user       User     @relation(fields: [userId], references: [email])
+  userId     String
+
+  chapter    Chapter  @relation(fields: [chapterNameRef], references: [id],onDelete:Cascade)
+  chapterNameRef  String
+
+  course Course @relation(fields: [courseId], references: [id],onDelete:Cascade)
+  courseId String
+}
+

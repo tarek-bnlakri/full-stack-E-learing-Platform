@@ -1,0 +1,39 @@
+.course{
+
+    width: 100%;
+    .exit{
+        z-index: 1000;
+        position: fixed;
+        display: flex;
+        justify-content: end;
+        right: 80px;
+        top: 24px;
+       font-weight: 700;
+       font-size: 18px;
+       a{
+        display: flex;
+        align-items: center;
+       }
+    }
+}
+@media  (max-width: 767px) {
+    .course{
+
+        width: 100%;
+        .exit{
+            z-index: 1000;
+            position: fixed;
+            display: flex;
+            justify-content: end;
+            right: 80px;
+            top: 25px;
+           font-weight: 700;
+           font-size: 18px;
+           a{
+            display: flex;
+            align-items: center;
+           }
+        }
+    }
+
+}

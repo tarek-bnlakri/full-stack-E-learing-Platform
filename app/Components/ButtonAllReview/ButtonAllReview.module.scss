@@ -1,0 +1,17 @@
+.ButtonContainer{
+button{
+    cursor: pointer;
+    background-color:white;
+    color: var(--black);
+    border: 1px solid grey;
+    padding: 5px;
+    font-weight: 800;
+    text-transform: capitalize;
+    width: max-content;
+    &:hover{
+        transition: 0.3s all ease-in;
+        background-color: var(--primary);
+        color: white;
+    }
+}
+}

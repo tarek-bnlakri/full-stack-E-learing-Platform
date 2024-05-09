@@ -1,0 +1,25 @@
+.content{
+   margin: 0 8%;
+}
+.About{
+
+   margin-bottom: 80px;
+   padding-top: 80px;
+   display: flex;
+   flex-direction: column;
+   gap: 80px;
+}
+@media  (max-width: 767px) {
+   /* CSS rules for screens between 600px and 767px */
+   .content{
+      
+   }
+   .About{
+   
+      margin-bottom: 80px;
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+   }
+ }

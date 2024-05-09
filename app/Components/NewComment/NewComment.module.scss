@@ -1,0 +1,78 @@
+.NewComment{
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    .black{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; 
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.521);
+    }
+    .wrraper{
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        z-index: 1100;
+       padding: 20px 60px;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       flex-direction: column;
+       gap: 20px;
+       .ratingBar{
+         font-size: 50px;
+       }
+       .comment{
+        display: grid;
+        grid-template-columns:  1fr; /* Two equal columns */
+        grid-column-gap: 40px;        
+        gap: 10px;
+        width: 100%;
+       
+        textarea{
+            height: 100px;
+            width: 100%;
+            border: 1px solid;
+            padding: 10px;
+            font-weight: 700;
+        }
+        .Back{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            &:hover{
+                color: #722294;
+            }
+           
+        }
+        button{
+            margin-top: 10px;
+            justify-self: end;
+            background-color: var(--primary);
+            color: rgba(255, 255, 255, 0.925);
+            padding: 10px;
+            font-weight: 800;
+            &:hover{
+                background-color: #722294;
+            }
+         
+        }
+       }
+       h1{
+        color: var(--black);
+        font-weight: 800;
+        font-size: 24px;
+        
+       }
+    }
+}

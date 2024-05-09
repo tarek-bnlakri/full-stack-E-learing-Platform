@@ -1,0 +1,27 @@
+.containerLogin{
+    height: calc(100vh - 70px);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .box{
+        cursor: pointer;
+        padding: 20px;
+        background-color: var(--light);
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .icon{
+            img{
+                height: 50px;
+            }
+        }
+        .text{
+                font-size: 24px;
+                font-weight: 700;
+                text-transform: capitalize;
+                color: var(--primary);
+        }
+    }
+}

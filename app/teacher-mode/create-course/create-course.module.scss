@@ -1,0 +1,117 @@
+.container{
+    padding: 50px;
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .textGrey{
+            color: grey;
+            font-weight: 600;
+        }
+        .head{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            h1{
+                font-weight: 600;
+            }
+           
+        }
+        .Input{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        p{
+            font-weight: 600;
+        }
+        gap: 4px;
+            input{
+                // border:1px solid rgba(128, 128, 128, 0.692);
+                width: 100%;
+                // padding: 20px;
+                // border-radius: 15px;
+            }
+        }
+        .Buttons{
+                display: flex;
+                gap: 20px;
+                .cancelButton{
+                    border:1px solid rgba(128, 128, 128, 0.616);
+                }
+        }
+        .catigoryContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            p{
+                font-weight: 600;
+            }
+        }
+    }
+}
+.disable{
+    padding: 50px;
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .textGrey{
+            color: grey;
+            font-weight: 600;
+        }
+        .head{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            h1{
+                font-weight: 600;
+            }
+           
+        }
+        .Input{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        p{
+            font-weight: 600;
+        }
+        gap: 4px;
+            input{
+               
+                width: 100%;
+                
+            }
+        }
+        .Buttons{
+                display: flex;
+                gap: 20px;
+                .cancelButton{
+                    border:1px solid rgba(128, 128, 128, 0.616);
+                }
+        }
+        .catigoryContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            p{
+                font-weight: 600;
+            }
+        }
+    }
+ 
+}

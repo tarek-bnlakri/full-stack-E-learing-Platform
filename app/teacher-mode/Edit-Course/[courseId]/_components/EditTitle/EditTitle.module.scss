@@ -1,0 +1,19 @@
+.editTitle{
+    background-color: rgba(212, 237, 250, 0.651);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .head{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        .right{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}

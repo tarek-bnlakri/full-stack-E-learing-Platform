@@ -1,0 +1,132 @@
+.CourseContent{
+    padding: 30px 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    .head{
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        a{
+            
+            width: max-content;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            &:hover{
+                text-decoration: underline;
+                letter-spacing: 2px;
+                transition: 0.3s all ease-in-out;
+            }
+        }
+    }
+    
+    .title{
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--primary);
+        
+    }
+    .countent{
+        padding-left: 30px;
+    }
+    .buttonCountainer{
+        display: flex;
+        gap: 10px;
+        margin:50px 0;
+    }
+    .QuizContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    .wrapQuiz {
+        
+        // position: absolute;
+        // top: 50%; /* Aligns the top of the div to the vertical center */
+        // left: 50%; /* Aligns the left edge of the div to the horizontal center */
+        // transform: translate(-50%, -50%); /* Moves the div back to center by half its width and height */
+       
+       
+    }
+}
+}
+@media  (max-width: 767px) {
+    .CourseContent{
+        padding: 50px 5px 0px 5px;
+                display: flex;
+        flex-direction: column;
+        gap: 50px;
+        position: relative;
+        .head{
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            a{
+                
+                width: max-content;
+                font-size: 20px;
+                font-weight: 900;
+                letter-spacing: 0.5px;
+                &:hover{
+                    text-decoration: underline;
+                    letter-spacing: 2px;
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+        }
+        
+        .title{
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            
+        }
+        .countent{
+            padding-left: 15px;
+            text-wrap: wrap;
+            
+            }
+        .buttonCountainer{
+            display: flex;
+            gap: 10px;
+            margin:50px 0;
+        }
+        .QuizContainer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        .wrapQuiz {
+            
+            // position: absolute;
+            // top: 50%; /* Aligns the top of the div to the vertical center */
+            // left: 50%; /* Aligns the left edge of the div to the horizontal center */
+            // transform: translate(-50%, -50%); /* Moves the div back to center by half its width and height */
+           
+           
+        }
+    }
+    }
+  }

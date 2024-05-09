@@ -1,0 +1,203 @@
+.About{
+    display: flex;
+    gap: 40px;
+    .imageContainer{
+        
+        flex: 1;
+        img{
+            width: 100%;
+            height: 500px;
+            object-fit:cover;
+
+        }
+    }
+    .textContainer{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+        .titleAboutContainer{
+            display: flex;
+            gap: 8px;
+            .blue{
+                color: var(--primary);
+                font-weight: 700;
+            }
+            .lineContainer{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+                .fline{
+                    width: 40px;
+                    height: 2px;
+                    background-color: var(--primary);
+                    color: var(--primary);
+                }
+                .lline{
+                    background-color: var(--primary);
+                    height: 2px;
+                    width: 70px;
+                }
+            }
+        }
+        h1{
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+        p{
+            color: rgba(104, 102, 102, 0.938);
+            line-height: 20px;
+        }
+        .linkContainer{
+            display: flex;
+            justify-content: space-between;
+            .item{
+                
+                display: flex;
+                flex-direction: column;
+                 gap:15px;
+                 .iconAndTxt{
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    span{
+                        color: var(--primary);
+                    }
+                 }
+            }
+        }
+        
+        .buttonAbout{
+            width: 100%;
+            height: 100%;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+          
+            a{
+                width: max-content;
+                padding: 10px;
+                background-color: var(--primary);
+                color: var(--light);
+                border: none;
+                font-size: 13px;
+                font-weight: 500;
+                &:hover{
+                    opacity: 0.8;
+                    transition: 0.3s ease-out;
+                }
+            
+           
+            
+        }
+    }
+    }
+}
+@media  (max-width: 767px) {
+    /* CSS rules for screens between 600px and 767px */
+    .About{
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 20px;
+        .imageContainer{
+        
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+    
+            }
+        }
+        .textContainer{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            
+            .titleAboutContainer{
+                display: flex;
+                gap: 8px;
+                justify-content: center;
+                .blue{
+                    color: var(--primary);
+                    font-weight: 700;
+                    font-size: 22px;
+                    
+                }
+                .lineContainer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    
+                    .fline{
+                        width: 40px;
+                        height: 2px;
+                        background-color: var(--primary);
+                        color: var(--primary);
+                    }
+                    .lline{
+                        background-color: var(--primary);
+                        height: 2px;
+                        width: 70px;
+                    }
+                }
+            }
+            h1{
+                font-size: 18px;
+                font-weight: 800;
+                letter-spacing: 2px;
+            }
+            p{
+                color: rgba(104, 102, 102, 0.815);
+                
+            }
+            .linkContainer{
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    
+                    display: flex;
+                    flex-direction: column;
+                     gap:15px;
+                     .iconAndTxt{
+                        display: flex;
+                        gap: 9px;
+                        span{
+                            color: var(--primary);
+                        }
+                     }
+                }
+            }
+            
+            .buttonAbout{
+                width: 100%;
+                height: 100%;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+              
+                a{
+                    width: max-content;
+                    padding: 10px;
+                    background-color: var(--primary);
+                    color: var(--light);
+                    border: none;
+                    font-size: 13px;
+                    font-weight: 500;
+                    &:hover{
+                        opacity: 0.8;
+                        transition: 0.3s ease-out;
+                    }
+                
+               
+                
+            }
+        }
+            
+        }
+    }
+  }

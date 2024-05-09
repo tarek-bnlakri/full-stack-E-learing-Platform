@@ -1,0 +1,132 @@
+
+.Card{
+    height: max-content;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    border: 0.5px solid rgba(128, 128, 128, 0.336);
+    flex-direction: column;
+    gap: 7px;
+    &:hover{
+        transition: 0.3s all ease-in-out;
+        background-color:  #9a64b118;
+     
+            
+            h4{transition: 0.3s all ease-in-out;
+
+                color: var(--primary)
+            }
+    }
+
+    ::-webkit-progress-bar{
+        border-radius: 10px;
+        background-color: inherit;
+        height: 7px;
+        border:0.01rem solid rgba(128, 128, 128, 0.493);
+    }
+
+    ::-webkit-progress-value {
+        background-color:   var(--primary);
+        border-radius: 10px;
+        
+      }
+      .link{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        .image{
+            height: 150px;
+            width: 100%;
+            img{
+                border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+       
+        
+            .title{
+                p{
+                    color: rgba(128, 128, 128, 0.726);
+                    font-weight: 600;
+                    font-size: 13px;
+                    margin-top: 2px
+                };
+            }
+            .chapters{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .icon{
+                    color: var(--primary);
+        
+                }
+                .text{
+                    color: rgba(128, 128, 128, 0.884);
+                    font-size: 13px;
+                }
+            }
+            .creater{
+                .create{
+                    font-weight: bold;
+                }
+            }
+            .name,.date{
+                color: rgba(128, 128, 128, 0.726);
+                font-weight: 600;
+                font-size: 13px;
+                margin-top: 5px
+            }
+
+
+        
+
+        }
+   }
+   .bottem{
+    display: flex;
+    flex-direction: column;
+    .complete{
+        ::-webkit-progress-bar{
+            border-radius: 10px;
+            background-color: inherit;
+            height: 7px;
+            border:0.01rem solid rgba(128, 128, 128, 0.493);
+        }
+        ::-webkit-progress-value {
+            background-color:  green;
+            border-radius: 10px;
+            
+          }
+    }
+    progress{
+        width: 100%;
+                     
+    }
+    .progVal{
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        span{
+            font-weight: 800;
+        }
+        .complete{
+            color:green;
+            ::-webkit-progress-value {
+                background-color:  green;
+                border-radius: 10px;
+                
+              }
+        }
+    }
+}
+}

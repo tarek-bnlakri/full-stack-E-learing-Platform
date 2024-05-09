@@ -1,0 +1,10 @@
+.countainer{
+    width: 100%;
+    padding: 50px 100px;
+}
+@media(max-width:600px){
+    .countainer{
+        width: 100%;
+        padding: 50px 20px;
+    }
+}
