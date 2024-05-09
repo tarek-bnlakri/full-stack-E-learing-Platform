@@ -23,7 +23,7 @@ function EditTitleChapter({chapter}) {
   }, [chapter])
   const updateTitle=async()=>{
     setlaoding(true)
-    const res=await fetch(`http://localhost:3000/api/chapter`,{method:'PUT',body:JSON.stringify({
+    const res=await fetch(`/api/chapter`,{method:'PUT',body:JSON.stringify({
       id:chapter.id,
       chapterName:value
     })})
