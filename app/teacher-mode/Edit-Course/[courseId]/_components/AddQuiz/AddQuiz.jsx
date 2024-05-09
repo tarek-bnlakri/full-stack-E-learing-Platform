@@ -71,7 +71,7 @@ function AddQuiz({chapter}) {
       }
       setLoading(true)
       const res= await fetch(/api/quiz`,{method:"PUT",body:JSON.stringify({
-        value
+        value:value
       })})
       if(res.ok){
         const data= await res.json()
