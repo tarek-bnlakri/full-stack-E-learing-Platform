@@ -14,7 +14,7 @@ const [loading, setloading] = useState(false)
 useEffect(() => {
   const getCatigories=async()=>{
     setloading(true)
-    const res = await fetch(`http://localhost:3000/api/catigory`)
+    const res = await fetch(`/api/catigory`)
       if(res.ok){
         const data=await res.json()
         setData(data)
