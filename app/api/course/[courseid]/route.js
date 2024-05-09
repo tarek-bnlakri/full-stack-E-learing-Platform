@@ -17,7 +17,11 @@ export const GET=async(req,{params})=>{
                       id: courseid,
                     },
                     include: {
-                      chapters: true,
+                      chapters:{
+                        where:{
+                          publish:true
+                        }
+                      },
                       progression: {
                         where: {
                           userId: userEmail,
