@@ -16,7 +16,7 @@ function NewComment({courseId}) {
   useEffect(() => {
    const getData=async()=>{
     setLoading(true)
-    const res =await fetch(`http://localhost:3000/api/Comments?courseId=${courseId}`)
+    const res =await fetch(`/api/Comments?courseId=${courseId}`)
       if(res.ok){
           const data=await res.json()
       
@@ -42,7 +42,7 @@ function NewComment({courseId}) {
       try {
         dispatch(setRating(value))
         setLoading(true)
-        const res=await fetch(`http://localhost:3000/api/Comments`,{method:'POST' ,body:JSON.stringify({
+        const res=await fetch(`/api/Comments`,{method:'POST' ,body:JSON.stringify({
           userText:text,
           rating:value,
           courseId
@@ -63,7 +63,7 @@ function NewComment({courseId}) {
       try {
         dispatch(setRating(value))
         setLoading(true)
-        const res=await fetch(`http://localhost:3000/api/Comments`,{method:'PUT' ,body:JSON.stringify({
+        const res=await fetch(`/api/Comments`,{method:'PUT' ,body:JSON.stringify({
           userText:text,
           rating:value,
           id:data.id
