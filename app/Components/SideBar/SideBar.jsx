@@ -8,8 +8,18 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import { useSelector } from 'react-redux';
 
 function SideBar({items,session}) {
- 
-  
+   const [isChapter, setIsChapter] = useState(false)
+   useEffect(() => {
+    items.map((item)=>{
+      if(item.isCompluted===true||item.isCompluted===false){
+        setIsChapter(true);
+      }
+      else{
+        setIsChapter(false);
+      }
+    })
+    
+  }, [items]);
   const [myprogression, setProgression] = useState([])
   
   
@@ -23,10 +33,10 @@ function SideBar({items,session}) {
     <>
     {display &&(
 
-      <div style={{transform:`${sideBar?"translateX(198px)":""}`}}   className={style.SideBar}>
+      <div style={{transform:`${!sideBar||isChapter?"translateX(194px)":""}`}} className={style.SideBar}>
     
-          <span  onMouseEnter={()=>setSideBar(!sideBar)}  onClick={()=>setSideBar(!sideBar)}> 
-           <ArrowForwardIosIcon color='#8e44ad' fontSize='large'/>
+          <span onMouseEnter={()=>{setSideBar(!sideBar);setIsChapter(false)}}  onClick={()=>setSideBar(!sideBar)}> 
+            <ArrowForwardIosIcon color='#8e44ad' fontSize='large'/>
           </span>
           {items.map(item=><Link href={item.path} className={chapterNameQuery===`${item.id}`?style.active:
            item.isCompluted?style.complete:style.item} key={item.id} >{item.name} {item.isCompluted&&<TaskAltIcon/>}</Link>)
