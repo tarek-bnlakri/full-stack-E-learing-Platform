@@ -24,7 +24,7 @@ function AddChapter({course}) {
         return toast.error("chapter name is required")
       }
       setLoading(true)
-      const res= await fetch(`http://localhost:3000/api/chapter`,{method:"POST",body:JSON.stringify({
+      const res= await fetch(`/api/chapter`,{method:"POST",body:JSON.stringify({
         chapterName:value,
         courseID:course.id
       })})
@@ -43,7 +43,7 @@ function AddChapter({course}) {
       
   }
   const deleteChapter=async(id)=>{
-      const res=await fetch(`http://localhost:3000/api/chapter?id=${id}`,{method:"DELETE"})
+      const res=await fetch(`/api/chapter?id=${id}`,{method:"DELETE"})
       if(res.ok){
         toast.success("Chapter deleted")
         router.refresh()
