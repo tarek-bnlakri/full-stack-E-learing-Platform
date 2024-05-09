@@ -6,7 +6,7 @@ import { getAuthSession } from '@/util/auth'
 import { redirect } from 'next/navigation'
 const getData=async(email)=>{
   try {
-    const res= await fetch(`http://localhost:3000/api/user/${email}`)    
+    const res= await fetch(`/api/user/${email}`)    
     const data= await res.json();
     return data
   } catch (error) {
