@@ -15,7 +15,7 @@ async function SingleCourse({params,searchParams}) {
     redirect('/')
   }
   const getData=async(courseId,session)=>{
-    const res= await fetch(`http://localhost:3000/api/course/${courseId}?userEmail=${session.user.email}`)
+    const res= await fetch(`/api/course/${courseId}?userEmail=${session.user.email}`)
     const data= await res.json();
     const {chapters,progression}=data
     
