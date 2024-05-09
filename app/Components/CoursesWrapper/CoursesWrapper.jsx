@@ -8,7 +8,7 @@ async function CoursesWrapper({catid}) {
   const session = await getAuthSession()
   const getData=async(catid)=>{
     try {
-          const res= await fetch(`http://localhost:3000/api/course?catid=${catid || ""}&userEmail=${session.user.email}`,{cache:"no-store"})
+          const res= await fetch(`/api/course?catid=${catid || ""}&userEmail=${session.user.email}`,{cache:"no-store"})
           // if(!res.ok){
           //   throw new Error("Couldn't connect to server")
           // }
