@@ -62,7 +62,7 @@ function HeadEditCourse({name,course,chapter}) {
       };
       const updatePublish=async()=>{
         setLoading(true)
-        const res=await fetch(`http://localhost:3000/api/course/${course.id}`,{method:'PUT',body:JSON.stringify({
+        const res=await fetch(`/api/course/${course.id}`,{method:'PUT',body:JSON.stringify({
           id:course.id,
           publish:course.publish==false?true:false
         })})
@@ -78,7 +78,7 @@ function HeadEditCourse({name,course,chapter}) {
       }
 
       const deleteCourse=async()=>{
-        const res=await fetch(`http://localhost:3000/api/course/${course.id}`,{method:"DELETE",body:JSON.stringify({
+        const res=await fetch(`/api/course/${course.id}`,{method:"DELETE",body:JSON.stringify({
           id:course.id
         })})
         if(res.ok){
