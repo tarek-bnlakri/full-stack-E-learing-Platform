@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 
 const getData= async()=>{
-  const res= await fetch(`http://localhost:3000/api/catigory`,{cache:"no-cache"})
+  const res= await fetch(`/api/catigory`,{cache:"no-cache"})
   if(!res.ok){
     throw new Error(`Error fetching`)
   }
