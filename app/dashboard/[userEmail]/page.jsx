@@ -13,7 +13,7 @@ async function Dashboard({params}) {
   }
   const getData =async()=>{
     try {
-        const res= await fetch(`http://localhost:3000/api/prog?userEmail=${session.user.email}`,{cache:"no-cache",method:"GET"})
+        const res= await fetch(`/api/prog?userEmail=${session.user.email}`,{cache:"no-cache",method:"GET"})
         
         if(!res.ok)
           throw new Error("Somthing wrong")
