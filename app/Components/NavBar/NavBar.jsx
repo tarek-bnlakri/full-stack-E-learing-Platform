@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { unstable_noStore as noStore } from 'next/cache';
 async function NavBar() {
   
-noStore()
+noStore() 
   const data= await getAuthSession()
   console.log(data)
   return (
