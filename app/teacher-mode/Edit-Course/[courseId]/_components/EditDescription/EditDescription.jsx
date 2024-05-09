@@ -23,7 +23,7 @@ function EditDescription({course}) {
     }
     const sendData=async()=>{
       setlaoding(true)
-      const res=await fetch(`http://localhost:3000/api/course/${course.id}`,{method:'PUT',body:JSON.stringify({
+      const res=await fetch(`/api/course/${course.id}`,{method:'PUT',body:JSON.stringify({
         id:course.id,
         objective:description
       })})
