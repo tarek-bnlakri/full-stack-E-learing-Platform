@@ -49,7 +49,7 @@ function HeadEditChapter({chapter,course}) {
         console.log(chapter)
         const updateTitle=async()=>{
           setLoading(true)
-          const res=await fetch(`http://localhost:3000/api/chapter`,{method:'PUT',body:JSON.stringify({
+          const res=await fetch(`/api/chapter`,{method:'PUT',body:JSON.stringify({
             id:chapter.id,
             publish:chapter.publish==false?true:false
           })})
@@ -65,7 +65,7 @@ function HeadEditChapter({chapter,course}) {
             }
         }
         const deleteChapter=async(id)=>{
-          const res=await fetch(`http://localhost:3000/api/chapter?id=${chapter.id}`,{method:"DELETE"})
+          const res=await fetch(`/api/chapter?id=${chapter.id}`,{method:"DELETE"})
           if(res.ok){
             toast.success("Chapter deleted")
             router.push('?')
