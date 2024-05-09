@@ -9,7 +9,7 @@ import HTMLReactParser from 'html-react-parser'
 import dynamic from 'next/dynamic';
 const getData=async(chapterName,session)=>{
      
-  const res= await fetch(`https://full-stack-e-learing-platform.vercel.app/api/chapter/?chapterName=${chapterName || ''}&userEmail=${session.user.email || ''}`,{cache:"no-store"})
+  const res= await fetch(`full-stack-e-learing-platform-with-tarek.vercel.app/api/chapter/?chapterName=${chapterName || ''}&userEmail=${session.user.email || ''}`,{cache:"no-store"})
   if(!res.ok){
       throw new Error('invalide search')
   }
