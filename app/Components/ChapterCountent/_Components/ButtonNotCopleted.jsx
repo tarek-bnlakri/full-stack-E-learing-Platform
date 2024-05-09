@@ -6,7 +6,7 @@ import ButtonIsCompleted from './ButtonIsCompleted';
 const handlComplutedButon =async (chapterName,courseId,setCompleted)=>{
     setCompleted(true)
     try {
-      const res =await fetch(`http://localhost:3000/api/prog`,{method:"POST",body:JSON.stringify({chapterName,courseId
+      const res =await fetch(`/api/prog`,{method:"POST",body:JSON.stringify({chapterName,courseId
       })})
     } catch (error) {
       console.log("from trycatch block ButtonIsCompluted",error)
