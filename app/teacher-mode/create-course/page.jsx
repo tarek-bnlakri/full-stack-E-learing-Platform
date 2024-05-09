@@ -27,7 +27,7 @@ function CreateCourse() {
         console.log("is fetch")
         setLoading(true)
         
-        const res=await fetch(`http://localhost:3000/api/catigory`)
+        const res=await fetch(`/api/catigory`)
         if(res.ok){
             const data = await res.json()
             setData(data)
@@ -56,7 +56,7 @@ function CreateCourse() {
     const newCourse=async()=>{
         toast.loading("wait..")
         setLoading(true)
-        const res=await fetch(`http://localhost:3000/api/course`,{method:"POST",body:JSON.stringify({
+        const res=await fetch(`/api/course`,{method:"POST",body:JSON.stringify({
             title,
             catigory
         })})
