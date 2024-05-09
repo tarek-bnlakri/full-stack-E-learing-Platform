@@ -39,7 +39,7 @@ function AddQuiz({chapter}) {
         return toast.error("All fields are required")
       }
       setLoading(true)
-      const res= await fetch(`http://localhost:3000/api/quiz`,{method:"POST",body:JSON.stringify({
+      const res= await fetch(`/api/quiz`,{method:"POST",body:JSON.stringify({
         value:{...value,id:chapter.id}
       })})
       if(res.ok){
@@ -56,7 +56,7 @@ function AddQuiz({chapter}) {
       
   }
   const deleteQestion=async(id)=>{
-      const res=await fetch(`http://localhost:3000/api/quiz?id=${id}`,{method:"DELETE"})
+      const res=await fetch(`/api/quiz?id=${id}`,{method:"DELETE"})
       if(res.ok){
         toast.success("Question deleted")
         router.refresh()
@@ -70,7 +70,7 @@ function AddQuiz({chapter}) {
         return toast.error("All fields are required")
       }
       setLoading(true)
-      const res= await fetch(`http://localhost:3000/api/quiz`,{method:"PUT",body:JSON.stringify({
+      const res= await fetch(/api/quiz`,{method:"PUT",body:JSON.stringify({
         value
       })})
       if(res.ok){
