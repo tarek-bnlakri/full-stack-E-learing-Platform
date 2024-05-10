@@ -43,6 +43,7 @@ export const PUT=async(req)=>{
     if(!body)
         return new NextResponse(JSON.stringify("all field required"),{status:400}) 
     const{id,question,options,answer}=body.value
+    const newOptions=options.split(/[,]/)
     console.log(body)
     
         try {
@@ -52,7 +53,7 @@ export const PUT=async(req)=>{
                 },
                 data: {
                     question,
-                    options,
+                    options:newOptions,
                     answer:parseInt(answer),
                 },
               })
