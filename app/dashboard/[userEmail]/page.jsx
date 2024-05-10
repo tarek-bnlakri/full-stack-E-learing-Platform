@@ -13,7 +13,7 @@ async function Dashboard({params}) {
   }
   const getData =async()=>{
     try {
-        const res= await fetch(`https://full-stack-e-learing-platform-with-tarek.vercel.app/api/prog?userEmail=${session.user.email}`,{cache:"no-cache",method:"GET"})
+        const res= await fetch(`${process.env.DOMAIN}/api/prog?userEmail=${session.user.email}`,{cache:"no-cache",method:"GET"})
         
         if(!res.ok)
           throw new Error("Somthing wrong")
