@@ -11,8 +11,8 @@ import { useSession } from 'next-auth/react';
 
 function CreateCourse() {
     const router=useRouter()
-    const session=useSession()
-    if(!session){
+     const {data:userdata,status}=useSession()
+    if(!userdata){
             router.push('/')
     }
     const [title, setTitle] = useState('')
