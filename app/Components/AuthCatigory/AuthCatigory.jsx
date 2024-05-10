@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 
 const getData= async()=>{
-  const res= await fetch(`${process.env.DOMAIN}/api/catigory`,{method:"GET",cache:"no-cache"})
+  const res= await fetch(`https://full-stack-e-learing-platform.vercel.app/api/catigory`,{method:"GET",cache:"no-cache"})
   if(!res.ok){
     throw new Error(`Error fetching`)
   }
