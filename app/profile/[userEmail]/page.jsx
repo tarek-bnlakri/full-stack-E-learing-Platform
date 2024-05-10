@@ -6,7 +6,7 @@ import { getAuthSession } from '@/util/auth'
 import { redirect } from 'next/navigation'
 const getData=async(email)=>{
   try {
-    const res= await fetch(`https://full-stack-e-learing-platform-with-tarek.vercel.app/api/user/${email}`,{method:"GET"})    
+    const res= await fetch(`${process.env.DOMAIN}/api/user/${email}`,{method:"GET"})    
     const data= await res.json();
     return data
   } catch (error) {
