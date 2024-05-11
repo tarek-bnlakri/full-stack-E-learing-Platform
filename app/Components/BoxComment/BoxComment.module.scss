@@ -48,3 +48,63 @@
      line-height: 18px;
     }
  }
+ @media (max-width:700px){
+    .box{
+        width: 300px;
+        height: min-content;
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgb(128, 128, 128);
+        gap: 10px;
+        overflow-y: auto;
+        .head{
+             display: flex;
+             padding: 0;
+             gap: 10px;
+             
+         img{
+             height: 50px;
+             width: 50px;
+             border-radius: 50%;
+             object-fit: cover;
+         }
+         .right{
+             display: flex;
+             flex-direction: column;
+             gap: 5px;
+             .ratingAndDateCont{
+              
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                .raitingbr{
+                    color: rgb(238, 156, 31);
+                   
+                }
+                .date{
+                 
+                    color: grey;
+                    font-weight: 500;
+                }
+             }
+            
+             .name{
+                 font-weight: 700;
+             }
+            
+            //  p{
+            //      display: flex;
+            //      gap: 5px;
+            //      span{
+            //          display: flex;
+            //      }
+            //  }
+         }
+        }
+        .body{
+         line-height: 18px;
+        }
+     }
+ }
