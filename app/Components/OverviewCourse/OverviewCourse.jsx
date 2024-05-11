@@ -24,7 +24,7 @@ sumUserRating = couments.reduce((sum, item) => sum + item.rating, 0);
                 <div className={style.rating}>
                     {data.couments.length>0?
                     <div className={style.raitingbr}>
-                             {sumUserRating / couments.length}
+                             {(sumUserRating / couments.length).toFixed(2)}
                        <Rating value={sumUserRating/couments.length} readOnly/>
                     </div>:"No rating"
                     } 
@@ -59,13 +59,18 @@ sumUserRating = couments.reduce((sum, item) => sum + item.rating, 0);
               {data.user.bio?data.user.bio:<p>No Bio</p>} 
             </div>
         </div>
-        {(data.couments.length>0 && data.couments.length<3)&&<div className={style.review}>
+       <>
+        
+             {(data.couments.length>0 && data.couments.length<3)&&<div className={style.review}>
             <h2>Students Said</h2>
             <div className={style.wrraper}>
                 {data.couments.map(item=> <BoxComment key={item.id} item={item}/>)}
             </div>
-            {data.couments.length>3&&<ButtonAllReview data={data}/>}
-        </div>}
+            
+                </div>
+             }
+            {<div className={style.review}>  <h2>Students Said</h2>{data.couments.length >=3 &&<ButtonAllReview data={data}/>}</div>}
+        </>
        {data.user.courses.length>1&&<div className={style.courses}>
             <h4>More Courses by <span> Dr.{data.user.name}</span></h4>
             <div className={style.wrapper}>
