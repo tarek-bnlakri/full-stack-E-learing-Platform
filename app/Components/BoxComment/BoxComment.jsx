@@ -11,7 +11,7 @@ function BoxComment({item}) {
                 <img src={item.user.image} alt="" />
                 <div className={style.right}>
                     <p className={style.name}>{item.user.name}</p>
-                    <p>
+                    <p className={style.ratingAndDateCont}>
                     <span className={style.raitingbr}>
                       <Rating value={item.rating} readOnly/>
                     </span>
